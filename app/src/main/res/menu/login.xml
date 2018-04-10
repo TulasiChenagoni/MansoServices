@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/login_menu"
+        android:title="Login"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/register_menu"
+        android:title="Register"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/partner_menu"
+        android:title="SignUp As Partner"
+        app:showAsAction="never"/>
+
+</menu>
