@@ -1,14 +1,244 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="300dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/home_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape"
+            android:text="Book Your Service"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/home_carpenter"-->
+                <!--android:layout_width="160dp"-->
+                <!--android:layout_height="160dp"-->
+                <!--android:layout_margin="5dp"-->
+                <!--app:cardCornerRadius="19dp"-->
+                <!--app:cardElevation="6dp"-->
+                <!--android:background="@color/colorFAB3"-->
+                <!--android:clickable="true"-->
+                <!--android:foreground="?android:attr/selectableItemBackground">-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/home_carpenter"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/carpenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Carpenter"
+                        android:textColor="@color/yellow"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:background="@color/lightgray" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="Book Now "-->
+                    <!--android:textColor="@android:color/darker_gray" />-->
+                </LinearLayout>
+
+                <!--</android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/home_ac"-->
+                <!--android:layout_width="160dp"-->
+                <!--android:layout_height="160dp"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:background="#d28d47"-->
+                <!--android:clickable="true"-->
+                <!--app:cardCornerRadius="19dp"-->
+                <!--app:cardElevation="6dp"-->
+                <!--android:foreground="?android:attr/selectableItemBackground">-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ac_repair" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="AC Repair"
+                        android:textColor="@color/yellow"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:background="@color/lightgray" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text="Book Now"-->
+                    <!--android:textColor="@android:color/darker_gray" />-->
+                </LinearLayout>
+
+                <!--</android.support.v7.widget.CardView>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--<android.support.v7.widget.CardView-->
+                    <!--android:id="@+id/home_call"-->
+                    <!--android:layout_width="160dp"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:background="@color/colorFAB3"-->
+                    <!--android:clickable="true"-->
+                    <!--android:foreground="?android:attr/selectableItemBackground"-->
+                    <!--app:cardCornerRadius="19dp"-->
+                    <!--app:cardElevation="6dp">-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="40dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circlebakckgroundpurple"
+                            android:padding="10dp"
+                            android:src="@drawable/call" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Call Now"
+                            android:textColor="@color/yellow"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                <!--</android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/home_client"-->
+                <!--android:layout_width="160dp"-->
+                <!--android:layout_height="160dp"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:background="@color/colorFAB3"-->
+                <!--app:cardCornerRadius="19dp"-->
+                <!--app:cardElevation="6dp"-->
+                <!--android:clickable="true"-->
+                <!--android:foreground="?android:attr/selectableItemBackground">-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="40dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/circlebackgroundyellow"
+                        android:padding="10dp"
+                        android:src="@drawable/clients" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Clients"
+                        android:textColor="@color/yellow"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--</android.support.v7.widget.CardView>-->
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+

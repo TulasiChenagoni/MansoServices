@@ -1,4 +1,5 @@
-<ScrollView android:layout_width="match_parent"
+<ScrollView
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -9,12 +10,19 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/contact_us"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
 
         <ImageView
@@ -34,15 +42,31 @@
         android:fontFamily="serif"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:textSize="20sp"
-        android:textColor="#00283a"
-        android:fontFamily="serif"
-        android:text="@string/address"/>
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textColor="#00283a"-->
+        <!--android:fontFamily="serif"-->
+        <!--android:text="@string/address"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <!--<include layout="@layout/activity_maps"/>-->
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/contact_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.mansopresk.mansoservices.MapsActivity" />
+    </FrameLayout>
 
 
     <LinearLayout
@@ -91,7 +115,6 @@
         android:textColor="#1a7eac"
         android:fontFamily="serif"
         android:text="+91 916 028 5374"
-
         android:id="@+id/second_no"/>
 
     <LinearLayout

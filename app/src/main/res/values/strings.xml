@@ -7,4 +7,13 @@
 
 In the United Kingdom, the public audit agencies produced a report in May 2007 called "Value for Money in public sector corporate services". This provides performance indicators in five categories: Finance, Human Resources, Information and Communication Technology, Procurement, and Estates Management.
     \n\nCompany incorporation is the process of forming a company corporation officially in the country of residence. It is also possible non-residents to set up a company: see offshore company. However, laws vary in all countries. International corporate service consultants specialise in dealing with incorporation in the country in question. Once application is successful, the company will receive a certificate of incorporation. Which provides valid existence of the company under the registered name given.</string>
+
+    <string name="about_us">The creative power that runs Mansopresk Private Limited is in the hearts of our highly talented work force. Each member of our team comes with extensive experience in application development for mobile and web-based platforms, creative design,2d design and testing. Professionalism, transparency, commitment, integrity: these are the four tenets that we worship at Mansopresk Private Limited. And we embed these beliefs into our projects as well, irrespective of how big or small they are. We face the challenges, ups and downs, simplicities and complexities of each of our projects with a never-give-up attitude</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_nav_main">NavMainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

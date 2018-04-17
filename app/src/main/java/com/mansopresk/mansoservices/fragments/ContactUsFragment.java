@@ -1,25 +1,38 @@
 package com.mansopresk.mansoservices.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.mansopresk.mansoservices.R;
 
 
-public class ContactUsFragment extends Fragment
+public class ContactUsFragment extends Fragment implements OnMapReadyCallback
 {
 
     TextView first_no, second_no,mail_tv;
 
+    private GoogleMap mMap;
+
+
+
     public ContactUsFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -36,6 +49,10 @@ public class ContactUsFragment extends Fragment
         first_no = view.findViewById(R.id.first_no);
         second_no = view.findViewById(R.id.second_no);
         mail_tv = view.findViewById(R.id.mail_tv);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.contact_map);
+        mapFragment.getMapAsync(this);
 
         first_no.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,5 +90,19 @@ public class ContactUsFragment extends Fragment
         });
 
         return view;
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap)
+    {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng manso = new LatLng(17.4573406, 78.35111059999997);
+//        String url = "http://maps.google.com/maps/api/staticmap?center=" + manso +"&zoom=15&size=200x200&sensor=false";
+        mMap.addMarker(new MarkerOptions().position(manso).title("Mansopresk Pvt Ltd"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(manso));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(11),2000,null);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
     }
 }

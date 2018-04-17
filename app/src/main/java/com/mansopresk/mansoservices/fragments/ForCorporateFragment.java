@@ -74,7 +74,6 @@ public class ForCorporateFragment extends Fragment
     }
 
 
-
     public class BookPageAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
         Context context;
