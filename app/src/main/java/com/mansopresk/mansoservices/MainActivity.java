@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar_main);
         mToolbar.setTitle("MansoServices");
 //        mToolbar.setLogo(R.drawable.tcs);
 //
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                finish();
 //            }
 //        });
+
     }
 
         @Override
